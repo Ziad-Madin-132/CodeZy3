@@ -1,0 +1,478 @@
+/* body {
+  text-align: left;
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  background-image: url(background.jpg);
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+}
+ 
+.navbar {
+  text-align: left;
+  text-align: center;
+  background-color: #1a1a2e;
+  color: white;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 95%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #00c3ff;
+}
+
+header {
+  background: linear-gradient(to left, #1a1a2e, #16213e);
+  color: white;
+  padding: 40px 20px 40px;
+  text-align: center;
+  margin-top: 70px;
+}
+
+header h1 {
+  font-size: 58px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+header p {
+  font-size: 22px;
+}
+
+section {
+  text-align: left;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 40px;
+}
+
+h2 {
+  text-align: left;
+  font-size: 36px;
+  border-left: 6px solid #00c3ff;
+  padding-left: 12px;
+  color: #111;
+  margin-bottom: 50px;
+}
+
+.card {
+  text-align: left;
+  background: white;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+}
+
+.team {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.team-member {
+  text-align: left;
+  background-color: #ffffff;
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(17, 192, 223, 0.1);
+}
+
+.team-member img {
+  text-align: left;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgb(15, 191, 245);
+  margin-bottom: 10px;
+}
+
+.team-member h4 {
+  text-align: left;
+  font-size: 18px;
+  color: #007bff;
+  margin: 8px 0 4px;
+}
+
+.team-member p {
+  text-align: left;
+  font-size: 14px;
+  color: #444;
+}
+
+.btn {
+  text-align: left;
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #00c3ff;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  text-align: left;
+  background-color: #009dcf;
+}
+
+.testimonial {
+  text-align: left;
+  background: #ffffff;
+  padding: 20px;
+  border-right: 4px solid #00c3ff;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-style: italic;
+  color: #333;
+}
+
+footer {
+  text-align: left;
+  background-color: #1a1a2e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 100px;
+}
+h1 span {
+  text-align: left;
+  text-shadow: 2px 2px 2px rgba(35, 94, 223, 0.856),
+    3px 3px 3px rgb(11, 26, 235), 4px 4px 4px rgb(109, 17, 230);
+}
+li span {
+  text-align: left;
+  color: #00c3ff;
+}
+section h2 {
+  text-align: left;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(35, 94, 223, 0.856),
+    3px 3px 3px rgb(11, 26, 235);
+}
+
+hr {
+  border: solid 7px rgb(61, 249, 255);
+  border-style: ridge;
+  width: 50%;
+  height: 50%;
+
+  text-align: center;
+}
+center img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50% 50%;
+}
+ul li {
+  direction: ltr;
+} 
+  */
+body {
+  text-align: left;
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  background-image: url(background.jpg);
+  background-size: cover; /* Ensures the background image covers the entire body */
+  background-attachment: fixed; /* Makes the background image fixed during scroll */
+}
+
+/* Navbar */
+.navbar {
+  text-align: center;
+  background-color: #1a1a2e;
+  color: white;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 95%; /* Adjusted for better spacing */
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #00c3ff;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 15px; /* Add some margin to the logo */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    position: static; /* Change to static on smaller screens to allow natural flow */
+    width: 100%;
+  }
+
+  .navbar div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar a {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+
+  .navbar .logo {
+    margin: 10px 0;
+  }
+
+  header {
+    margin-top: 0; /* Remove top margin on small screens if navbar is static */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  header h1 {
+    font-size: 40px; /* Smaller font size for header on mobile */
+  }
+
+  header p {
+    font-size: 18px; /* Smaller font size for header paragraph */
+  }
+
+  section {
+    margin: 40px auto; /* Adjust margin for sections */
+    padding: 0 20px; /* Adjust padding for sections */
+  }
+
+  h2 {
+    font-size: 28px; /* Smaller font size for section titles */
+    margin-bottom: 30px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .team {
+    flex-direction: column; /* Stack team members vertically on small screens */
+    align-items: center;
+  }
+
+  .team-member {
+    width: 80%; /* Adjust width for team members */
+    max-width: 250px; /* Set a max-width for better control */
+  }
+
+  .btn {
+    width: 100%; /* Make buttons full width */
+    text-align: center;
+  }
+
+  .testimonial {
+    font-size: 14px; /* Adjust testimonial font size */
+  }
+
+  ul li {
+    padding-left: 0; /* Remove left padding for list items */
+  }
+}
+
+header {
+  background: linear-gradient(to left, #1a1a2e, #16213e);
+  color: white;
+  padding: 40px 20px 40px;
+  text-align: center;
+  margin-top: 70px;
+}
+
+header h1 {
+  font-size: 58px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+header p {
+  font-size: 22px;
+}
+
+section {
+  text-align: left;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 40px;
+}
+
+h2 {
+  text-align: left;
+  font-size: 36px;
+  border-left: 6px solid #00c3ff;
+  padding-left: 12px;
+  color: #111;
+  margin-bottom: 50px;
+}
+
+.card {
+  text-align: left;
+  background: white;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+}
+
+.team {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.team-member {
+  text-align: left;
+  background-color: #ffffff;
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(17, 192, 223, 0.1);
+}
+
+.team-member img {
+  text-align: left;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgb(15, 191, 245);
+  margin-bottom: 10px;
+}
+
+.team-member h4 {
+  text-align: left;
+  font-size: 18px;
+  color: #007bff;
+  margin: 8px 0 4px;
+}
+
+.team-member p {
+  text-align: left;
+  font-size: 14px;
+  color: #444;
+}
+
+.btn {
+  text-align: left;
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #00c3ff;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  text-align: left;
+  background-color: #009dcf;
+}
+
+.testimonial {
+  text-align: left;
+  background: #ffffff;
+  padding: 20px;
+  border-right: 4px solid #00c3ff;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-style: italic;
+  color: #333;
+}
+
+footer {
+  text-align: left;
+  background-color: #1a1a2e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 100px;
+}
+h1 span {
+  text-align: left;
+  text-shadow: 2px 2px 2px rgba(35, 94, 223, 0.856),
+    3px 3px 3px rgb(11, 26, 235), 4px 4px 4px rgb(109, 17, 230);
+}
+li span {
+  text-align: left;
+  color: #00c3ff;
+}
+section h2 {
+  text-align: left;
+  color: white; /* This will make all section h2s white. Consider if this is intended for all sections or only those with a background. */
+  text-shadow: 2px 2px 2px rgba(35, 94, 223, 0.856),
+    3px 3px 3px rgb(11, 26, 235);
+}
+
+hr {
+  border: solid 7px rgb(61, 249, 255);
+  border-style: ridge;
+  width: 50%;
+  height: 50%;
+  margin: 50px auto; /* Center the hr element */
+}
+center img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50% 50%;
+}
+ul li {
+  direction: ltr; /* Ensure list items are left-to-right */
+  text-align: left; /* Align list item text to the left */
+}
